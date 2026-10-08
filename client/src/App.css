@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+  color: #f0f6fc;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 420px;
+  padding: 42px;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  background: #161b22;
+  text-align: center;
+}
+
+.login-card h1 {
+  margin-top: 0;
+  font-size: 42px;
+}
+
+.login-card p {
+  color: #8b949e;
+  margin-bottom: 30px;
+}
+
+.login-card button {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 13px;
+  background: #238636;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-card button:hover {
+  background: #2ea043;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+header {
+  height: 72px;
+  border-bottom: 1px solid #21262d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+}
+
+header h2 {
+  margin: 0;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-user img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.logout {
+  border: 1px solid #30363d;
+  background: #21262d;
+  color: white;
+  padding: 7px 13px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+main {
+  width: min(1100px, 88%);
+  margin: 55px auto;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #30363d;
+}
+
+.profile h1 {
+  margin: 0 0 5px;
+  font-size: 34px;
+}
+
+.profile a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.profile p {
+  color: #8b949e;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.stat-card span {
+  color: #8b949e;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 32px;
+}
+
+.coming-soon {
+  margin-top: 40px;
+  padding: 30px;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  background: #161b22;
+}
+
+.coming-soon h2 {
+  margin-top: 0;
+}
+
+.coming-soon p {
+  color: #8b949e;
+}
+
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header {
+    padding: 0 20px;
+  }
+}
+
+.repositories-section {
+  margin-top: 45px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title h2 {
+  margin: 0 0 6px;
+}
+
+.section-title p {
+  margin: 0;
+  color: #8b949e;
+}
+
+.repo-count {
+  color: #8b949e;
+  font-size: 14px;
+}
+
+.repositories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.repo-card {
+  display: block;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  color: #f0f6fc;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.repo-card:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+.repo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.repo-header h3 {
+  margin: 0;
+  color: #58a6ff;
+  font-size: 19px;
+}
+
+.badge {
+  padding: 3px 7px;
+  border: 1px solid #30363d;
+  border-radius: 20px;
+  color: #8b949e;
+  font-size: 11px;
+}
+
+.repo-description {
+  min-height: 42px;
+  margin: 18px 0;
+  color: #8b949e;
+  line-height: 1.5;
+}
+
+.repo-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #c9d1d9;
+  font-size: 14px;
+}
+
+.repo-date {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #21262d;
+  color: #8b949e;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .repositories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.repo-header a {
+  text-decoration: none;
+}
+
+.repo-header a:hover h3 {
+  text-decoration: underline;
+}
+
+.health {
+  margin: 22px 0;
+  padding: 16px;
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+}
+
+.health-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.health-header span {
+  color: #8b949e;
+  font-size: 13px;
+}
+
+.health-header strong {
+  font-size: 16px;
+}
+
+.health-bar {
+  width: 100%;
+  height: 8px;
+  background: #21262d;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.health-progress {
+  height: 100%;
+  background: #2ea043;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.health-label {
+  display: block;
+  margin-top: 8px;
+  color: #8b949e;
+  font-size: 12px;
+}
+
+.health-summary {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.health-summary:hover .health-expand {
+  color: #58a6ff;
+}
+
+.health-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.health-label {
+  margin-top: 0;
+}
+
+.health-expand {
+  color: #8b949e;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.health-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #21262d;
+}
+
+.health-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.health-check-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.check-icon {
+  width: 18px;
+  font-weight: bold;
+}
+
+.health-check.passed .check-icon {
+  color: #3fb950;
+}
+
+.health-check.failed .check-icon {
+  color: #f85149;
+}
+
+.health-check.failed {
+  color: #8b949e;
+}
+
+.check-points {
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.health-check.passed .check-points {
+  color: #3fb950;
+}
+
+.health-check.failed .check-points {
+  color: #8b949e;
+}
